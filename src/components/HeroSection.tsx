@@ -37,7 +37,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex flex-col items-center lg:items-end">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
               <img
@@ -45,6 +45,18 @@ const HeroSection = () => {
                 alt="مدرب الدورة"
                 className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-top"
               />
+            </div>
+            {/* Instructor Bio */}
+            <div className="mt-6 text-center lg:text-right max-w-[22rem]">
+              <h3 className="text-2xl md:text-3xl font-bold text-gradient-gold mb-2">
+                بسام إيهاب
+              </h3>
+              <p className="text-sm text-primary font-medium mb-2">
+                خبير الذكاء الاصطناعي وصناعة المحتوى - خبرة 3 سنوات
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
+              </p>
             </div>
           </div>
         </div>
