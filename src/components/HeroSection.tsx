@@ -43,8 +43,6 @@ const HeroSection = () => {
                 احجز مكانك الآن
               </Button>
             </div>
-
-            <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
           </div>
 
           {/* Hero Image */}
@@ -66,12 +64,14 @@ const HeroSection = () => {
                 خبير الذكاء الاصطناعي وصناعة المحتوى - خبرة 3 سنوات
               </p>
               <p className="text-base text-muted-foreground leading-relaxed">
-                متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
-              </p>
+              متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
+            </p>
             </div>
           </div>
         </div>
       </div>
+      
+      <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
     </section>
   );
 };
