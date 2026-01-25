@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
             {/* Instructor Bio */}
             <div className="mt-6 text-center max-w-[22rem]">
-              <h3 className="text-3xl md:text-4xl font-light tracking-wide text-gradient-gold mb-3">
+              <h3 className="text-4xl md:text-5xl font-bold text-gradient-gold mb-3">
                 بسام إيهاب
               </h3>
               <p className="text-base text-primary font-medium mb-2">
