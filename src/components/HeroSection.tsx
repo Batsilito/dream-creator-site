@@ -43,7 +43,7 @@ const HeroSection = () => {
               <img
                 src={heroImage}
                 alt="مدرب الدورة"
-                className="relative z-10 w-full max-w-sm aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-top"
+                className="relative z-10 w-full max-w-sm aspect-[3/4] rounded-3xl glow-gold-strong object-contain bg-black/50"
               />
             </div>
           </div>
