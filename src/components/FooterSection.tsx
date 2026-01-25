@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-interface FooterSectionProps {
-  onBookingClick: () => void;
-}
+const FooterSection = () => {
+  const scrollToPricing = () => {
+    document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" });
+  };
 
-const FooterSection = ({ onBookingClick }: FooterSectionProps) => {
   return (
     <footer className="py-12 bg-background border-t border-border">
       <div className="container mx-auto px-4">
@@ -17,7 +17,7 @@ const FooterSection = ({ onBookingClick }: FooterSectionProps) => {
             احترف صناعة المحتوى بالذكاء الاصطناعي وابدأ رحلتك في عالم الإبداع
           </p>
           
-          <Button variant="gold" size="lg" onClick={onBookingClick}>
+          <Button variant="gold" size="lg" onClick={scrollToPricing}>
             احجز مكانك الآن
           </Button>
           

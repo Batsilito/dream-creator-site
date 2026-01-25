@@ -14,14 +14,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar onBookingClick={() => setIsBookingOpen(true)} />
+      <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
       <PricingSection onBookingClick={() => setIsBookingOpen(true)} />
       <FeaturesSection />
       <TargetAudienceSection />
       <ToolsSection />
       <TestimonialsSection />
-      <FooterSection onBookingClick={() => setIsBookingOpen(true)} />
+      <FooterSection />
       <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
     </div>
   );
