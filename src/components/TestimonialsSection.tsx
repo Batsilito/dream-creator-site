@@ -66,8 +66,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
 );
 
 const TestimonialsSection = () => {
-  // Quadruple the testimonials for seamless infinite loop
-  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
+  // Triple the testimonials for true seamless loop
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section className="py-20 bg-card/30 overflow-hidden">
@@ -86,8 +86,8 @@ const TestimonialsSection = () => {
       </div>
 
       {/* Marquee Container */}
-      <div className="relative w-full">
-        <div className="flex gap-6 animate-marquee w-max">
+      <div className="relative w-full overflow-hidden">
+        <div className="flex gap-6 animate-marquee-slow">
           {duplicatedTestimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}
