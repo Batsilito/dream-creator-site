@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Check, ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
+import { Check, ArrowLeft, ArrowRight, MessageCircle, Copy, ExternalLink } from "lucide-react";
 import { z } from "zod";
+import { toast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "الاسم مطلوب").max(100, "الاسم طويل جداً"),
@@ -66,11 +67,25 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
       }
     } else if (step === 2) {
       if (formData.paymentMethod) {
+        // If "other" is selected, redirect to WhatsApp immediately
+        if (formData.paymentMethod === "other") {
+          const message = encodeURIComponent("مرحباً، أريد الاستفسار عن طرق دفع أخرى من خارج مصر");
+          window.open(`https://wa.me/%2B201016712243?text=${message}`, "_blank");
+          return;
+        }
         setStep(3);
       } else {
         setErrors({ paymentMethod: "اختر طريقة الدفع" });
       }
     }
+  };
+
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text);
+    toast({
+      title: "تم النسخ",
+      description: `تم نسخ ${label} بنجاح`,
+    });
   };
 
   const handleBack = () => {
@@ -212,6 +227,78 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
                   </div>
                 ))}
               </RadioGroup>
+
+              {/* Payment Details based on selection */}
+              {formData.paymentMethod === "instapay" && (
+                <div className="p-4 rounded-xl bg-muted/50 border border-border space-y-3">
+                  <p className="text-sm text-muted-foreground text-center">ادفع عبر Instapay من خلال الرابط التالي:</p>
+                  <Button
+                    variant="outline"
+                    className="w-full gap-2"
+                    onClick={() => window.open("https://ipn.eg/S/batsilitohsbc/instapay/7Gr2jR", "_blank")}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    فتح رابط Instapay
+                  </Button>
+                </div>
+              )}
+
+              {formData.paymentMethod === "vodafone" && (
+                <div className="p-4 rounded-xl bg-muted/50 border border-border space-y-3">
+                  <p className="text-sm text-muted-foreground text-center">حوّل المبلغ إلى رقم Vodafone Cash التالي:</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-lg font-bold font-mono" dir="ltr">01016712243</span>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard("01016712243", "الرقم")}
+                    >
+                      <Copy className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+
+              {formData.paymentMethod === "bank" && (
+                <div className="p-4 rounded-xl bg-muted/50 border border-border space-y-3">
+                  <p className="text-sm text-muted-foreground text-center">حوّل المبلغ إلى الحساب البنكي التالي:</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center justify-between p-2 bg-background rounded-lg">
+                      <span className="text-muted-foreground">البنك:</span>
+                      <span className="font-semibold">HSBC Egypt</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-background rounded-lg">
+                      <span className="text-muted-foreground">رقم الحساب:</span>
+                      <div className="flex items-center gap-1">
+                        <span className="font-mono text-xs" dir="ltr">004-253829-001</span>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-6 w-6"
+                          onClick={() => copyToClipboard("004-253829-001", "رقم الحساب")}
+                        >
+                          <Copy className="w-3 h-3" />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-background rounded-lg">
+                      <span className="text-muted-foreground">IBAN:</span>
+                      <div className="flex items-center gap-1">
+                        <span className="font-mono text-xs" dir="ltr">EG860025000400000004253829001</span>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-6 w-6"
+                          onClick={() => copyToClipboard("EG860025000400000004253829001", "IBAN")}
+                        >
+                          <Copy className="w-3 h-3" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {errors.paymentMethod && (
                 <p className="text-sm text-destructive text-center">
                   {errors.paymentMethod}
