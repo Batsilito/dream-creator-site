@@ -16,7 +16,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
       priceEGP: { original: 1500, discounted: 1000 },
       priceUSD: { original: 60, discounted: 40 },
       features: ["الوصول للمحتوى المسجل", "تواصل مباشر للأسئلة", "شهادة إتمام"],
-      popular: false,
+      popular: true,
     },
     {
       name: "كورس أونلاين حضوري",
@@ -29,7 +29,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
         "جلسات حية تفاعلية",
         "متابعة شخصية مكثفة",
       ],
-      popular: true,
+      popular: false,
     },
   ];
 
