@@ -74,10 +74,10 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
             return (
               <div
                 key={plan.name}
-                className={`relative bg-card border rounded-2xl p-8 flex flex-col transition-all hover:scale-105 ${
+                className={`relative bg-card border rounded-2xl p-8 flex flex-col transition-all hover:scale-105 hover:border-primary/50 ${
                   plan.popular
-                    ? "border-primary glow-gold"
-                    : "border-border hover:border-primary/50"
+                    ? "border-primary"
+                    : "border-border"
                 }`}
               >
                 {plan.popular && (
@@ -116,7 +116,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
                 </ul>
 
                 <Button
-                  variant={plan.popular ? "gold" : "outline"}
+                  variant="gold"
                   size="lg"
                   className="w-full"
                   onClick={onBookingClick}
