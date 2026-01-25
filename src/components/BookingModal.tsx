@@ -333,7 +333,7 @@ const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
 
           {/* Navigation */}
           <div className="flex gap-3 pt-4">
-            {step > 1 && step < 3 && (
+            {step > 1 && (
               <Button variant="outline" onClick={handleBack} className="flex-1 gap-2">
                 <ArrowRight className="w-4 h-4" />
                 السابق
