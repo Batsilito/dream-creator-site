@@ -13,8 +13,8 @@ const Navbar = () => {
             Bassam<span className="text-gradient-gold">TalksAI</span>
           </a>
           <div className="hidden md:flex items-center gap-6">
-            <a href="#courses" className="text-muted-foreground hover:text-foreground transition-colors">
-              الكورسات
+            <a href="#course-content" className="text-muted-foreground hover:text-foreground transition-colors">
+              محتوى الكورس
             </a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               من نحن
