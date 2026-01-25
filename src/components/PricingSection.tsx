@@ -67,14 +67,14 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           {plans.map((plan) => {
             const price = isEgypt ? plan.priceEGP : plan.priceUSD;
             
             return (
               <div
                 key={plan.name}
-                className={`relative bg-card border rounded-2xl p-8 space-y-6 transition-all hover:scale-105 ${
+                className={`relative bg-card border rounded-2xl p-8 flex flex-col transition-all hover:scale-105 ${
                   plan.popular
                     ? "border-primary glow-gold"
                     : "border-border hover:border-primary/50"
@@ -86,12 +86,12 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
                   </div>
                 )}
 
-                <div>
+                <div className="mb-6">
                   <h3 className="text-2xl font-bold">{plan.name}</h3>
                   <p className="text-muted-foreground">{plan.description}</p>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 mb-6">
                   <p className="text-muted-foreground line-through text-lg">
                     {price.original} {currency}
                   </p>
@@ -106,7 +106,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
                   </p>
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-grow mb-6">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <Check className="w-5 h-5 text-primary" />
