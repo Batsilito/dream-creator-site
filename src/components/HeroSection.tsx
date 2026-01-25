@@ -47,14 +47,14 @@ const HeroSection = () => {
               />
             </div>
             {/* Instructor Bio */}
-            <div className="mt-6 text-center lg:text-right max-w-[22rem]">
-              <h3 className="text-2xl md:text-3xl font-bold text-gradient-gold mb-2">
+            <div className="mt-6 text-center max-w-[22rem]">
+              <h3 className="text-3xl md:text-4xl font-light tracking-wide text-gradient-gold mb-3">
                 بسام إيهاب
               </h3>
-              <p className="text-sm text-primary font-medium mb-2">
+              <p className="text-base text-primary font-medium mb-2">
                 خبير الذكاء الاصطناعي وصناعة المحتوى - خبرة 3 سنوات
               </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
               </p>
             </div>
