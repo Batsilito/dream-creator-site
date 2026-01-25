@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "./CountdownTimer";
+import BookingModal from "./BookingModal";
 import heroImage from "@/assets/hero-instructor.jpg";
 
 const HeroSection = () => {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
@@ -30,10 +34,17 @@ const HeroSection = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="gold" size="xl" className="animate-pulse-glow">
+              <Button 
+                variant="gold" 
+                size="xl" 
+                className="animate-pulse-glow"
+                onClick={() => setIsBookingOpen(true)}
+              >
                 احجز مكانك الآن
               </Button>
             </div>
+
+            <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
           </div>
 
           {/* Hero Image */}
