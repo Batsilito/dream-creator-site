@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 
-const FooterSection = () => {
+interface FooterSectionProps {
+  onBookingClick: () => void;
+}
+
+const FooterSection = ({ onBookingClick }: FooterSectionProps) => {
   return (
     <footer className="py-12 bg-background border-t border-border">
       <div className="container mx-auto px-4">
@@ -13,7 +17,7 @@ const FooterSection = () => {
             احترف صناعة المحتوى بالذكاء الاصطناعي وابدأ رحلتك في عالم الإبداع
           </p>
           
-          <Button variant="gold" size="lg">
+          <Button variant="gold" size="lg" onClick={onBookingClick}>
             احجز مكانك الآن
           </Button>
           

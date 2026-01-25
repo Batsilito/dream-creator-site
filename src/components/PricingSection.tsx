@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
-const PricingSection = () => {
+interface PricingSectionProps {
+  onBookingClick: () => void;
+}
+
+const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
   const [isEgypt, setIsEgypt] = useState(true);
 
   const plans = [
@@ -115,6 +119,7 @@ const PricingSection = () => {
                   variant={plan.popular ? "gold" : "outline"}
                   size="lg"
                   className="w-full"
+                  onClick={onBookingClick}
                 >
                   احجز مكانك الآن
                 </Button>
