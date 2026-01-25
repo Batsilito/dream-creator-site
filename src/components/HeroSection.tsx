@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import CountdownTimer from "./CountdownTimer";
-import BookingModal from "./BookingModal";
-import heroImage from "@/assets/hero-instructor.jpg";
-
-const HeroSection = () => {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-
-  return (
+ import { Button } from "@/components/ui/button";
+ import CountdownTimer from "./CountdownTimer";
+ import heroImage from "@/assets/hero-instructor.jpg";
+ 
+ interface HeroSectionProps {
+   onBookingClick: () => void;
+ }
+ 
+ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
+   return (
     <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
@@ -38,7 +38,7 @@ const HeroSection = () => {
                 variant="gold" 
                 size="xl" 
                 className="animate-pulse-glow"
-                onClick={() => setIsBookingOpen(true)}
+                onClick={onBookingClick}
               >
                 احجز مكانك الآن
               </Button>
@@ -70,8 +70,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
     </section>
   );
 };
