@@ -39,9 +39,38 @@ const testimonials = [
   },
 ];
 
+const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+  <div className="flex-shrink-0 w-[350px] bg-card border border-border rounded-2xl p-6 space-y-4">
+    <div className="flex items-center gap-4">
+      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+        <span className="text-primary font-bold text-lg">
+          {testimonial.initial}
+        </span>
+      </div>
+      <div>
+        <p className="font-bold">{testimonial.name}</p>
+        <div className="flex items-center gap-1">
+          {Array.from({ length: testimonial.rating }).map((_, i) => (
+            <Star
+              key={i}
+              className="w-4 h-4 fill-primary text-primary"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+    <p className="text-muted-foreground leading-relaxed">
+      {testimonial.text}
+    </p>
+  </div>
+);
+
 const TestimonialsSection = () => {
+  // Double the testimonials for seamless loop
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
   return (
-    <section className="py-20 bg-card/30">
+    <section className="py-20 bg-card/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
           <p className="text-primary font-medium">آراء الطلاب</p>
@@ -54,35 +83,13 @@ const TestimonialsSection = () => {
             <span className="text-muted-foreground">تقييم من الطلاب</span>
           </div>
         </div>
+      </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-card border border-border rounded-2xl p-6 space-y-4 transition-all hover:border-primary/30"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold text-lg">
-                    {testimonial.initial}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-bold">{testimonial.name}</p>
-                  <div className="flex items-center gap-1">
-                    {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-primary text-primary"
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {testimonial.text}
-              </p>
-            </div>
+      {/* Marquee Container */}
+      <div className="relative">
+        <div className="flex gap-6 animate-marquee">
+          {duplicatedTestimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial} />
           ))}
         </div>
       </div>
