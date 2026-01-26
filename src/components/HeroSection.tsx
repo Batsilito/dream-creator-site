@@ -28,11 +28,14 @@ import heroImage from "@/assets/hero-instructor.jpg";
               </p>
             </div>
             
-            <p className="text-lg text-foreground/90 leading-relaxed">
-              انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
-              <br />
-              باستخدام الذكاء الاصطناعي.
-            </p>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
+                <br />
+                باستخدام الذكاء الاصطناعي.
+              </p>
+              <AnimatedCounter target={500} label="مشترك في الكورس" />
+            </div>
 
             {/* Countdown */}
             <CountdownTimer />
@@ -50,21 +53,16 @@ import heroImage from "@/assets/hero-instructor.jpg";
             </div>
           </div>
 
-          {/* Hero Image & Counter */}
+          {/* Hero Image */}
           <div className="relative flex flex-col items-center lg:items-end gap-6">
-            <div className="flex flex-col lg:flex-row items-center gap-6">
-              {/* Animated Counter */}
-              <AnimatedCounter target={500} label="مشترك في الكورس" className="mt-4" />
-              
-              {/* Instructor Image */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
-                <img
-                  src={heroImage}
-                  alt="مدرب الدورة"
-                  className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
-                />
-              </div>
+            {/* Instructor Image */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
+              <img
+                src={heroImage}
+                alt="مدرب الدورة"
+                className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
+              />
             </div>
             {/* Instructor Bio */}
             <div className="text-center max-w-[22rem]">
