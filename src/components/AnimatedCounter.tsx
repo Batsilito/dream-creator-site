@@ -48,15 +48,15 @@ const AnimatedCounter = ({ target, duration = 2000, label, className }: Animated
   return (
     <div
       ref={ref}
-      className={`bg-card/50 border border-border/50 rounded-2xl p-6 flex flex-col items-center justify-center space-y-4 backdrop-blur-sm ${className || ''}`}
+      className={`bg-card/50 border border-border/50 rounded-2xl px-6 py-4 flex items-center gap-4 backdrop-blur-sm ${className || ''}`}
     >
-      <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center">
-        <Users className="w-7 h-7 text-primary" />
+      <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center shrink-0">
+        <Users className="w-6 h-6 text-primary" />
       </div>
-      <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent">
+      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent">
         {count}+
       </div>
-      <p className="text-muted-foreground text-lg">{label}</p>
+      <p className="text-muted-foreground text-base">{label}</p>
     </div>
   );
 };
