@@ -8,6 +8,7 @@ import ToolsSection from "@/components/ToolsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FooterSection from "@/components/FooterSection";
 import BookingModal from "@/components/BookingModal";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -23,6 +24,7 @@ const Index = () => {
       <TestimonialsSection />
       <FooterSection />
       <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
+      <WhatsAppButton />
     </div>
   );
 };
