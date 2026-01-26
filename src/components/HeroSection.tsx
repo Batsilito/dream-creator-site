@@ -20,7 +20,7 @@
               كورس صناعة الفيديوهات{" "}
               <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
             </h1>
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground -mt-4">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground -mt-2">
               من الصفر للاحتراف
             </p>
             
