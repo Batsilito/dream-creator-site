@@ -1,6 +1,7 @@
- import { Button } from "@/components/ui/button";
- import CountdownTimer from "./CountdownTimer";
- import heroImage from "@/assets/hero-instructor.jpg";
+import { Button } from "@/components/ui/button";
+import CountdownTimer from "./CountdownTimer";
+import AnimatedCounter from "./AnimatedCounter";
+import heroImage from "@/assets/hero-instructor.jpg";
  
  interface HeroSectionProps {
    onBookingClick: () => void;
@@ -49,18 +50,24 @@
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative flex flex-col items-center lg:items-end">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
-              <img
-                src={heroImage}
-                alt="مدرب الدورة"
-                className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
-              />
+          {/* Hero Image & Counter */}
+          <div className="relative flex flex-col items-center lg:items-end gap-6">
+            <div className="flex flex-col lg:flex-row items-center gap-6">
+              {/* Animated Counter */}
+              <AnimatedCounter target={500} label="متدرب ناجح" />
+              
+              {/* Instructor Image */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
+                <img
+                  src={heroImage}
+                  alt="مدرب الدورة"
+                  className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
+                />
+              </div>
             </div>
             {/* Instructor Bio */}
-            <div className="mt-6 text-center max-w-[22rem]">
+            <div className="text-center max-w-[22rem]">
               <h3 className="text-4xl md:text-5xl font-bold text-gradient-gold mb-3">
                 بسام إيهاب
               </h3>
@@ -68,8 +75,8 @@
                 خبير الذكاء الاصطناعي وصناعة المحتوى
               </p>
               <p className="text-base text-muted-foreground leading-relaxed">
-              متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
-            </p>
+                متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
+              </p>
             </div>
           </div>
         </div>
