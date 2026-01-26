@@ -24,7 +24,7 @@
               من الصفر للاحتراف
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground/90 leading-relaxed">
               انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
               <br />
               باستخدام الذكاء الاصطناعي.
