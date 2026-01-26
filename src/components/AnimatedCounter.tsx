@@ -60,7 +60,7 @@ const AnimatedCounter = ({ target, duration = 2000, label, className }: Animated
       <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
         <Users className="w-4 h-4 text-primary" />
       </div>
-      <div dir="ltr" className="text-3xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent">
+      <div dir="ltr" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent">
         {count}+
       </div>
       <p className="text-muted-foreground text-sm">{label}</p>

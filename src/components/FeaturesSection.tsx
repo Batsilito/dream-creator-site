@@ -81,13 +81,13 @@ const FeaturesSection = () => {
     <section id="course-content" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             هاتتعلم ايه في كورس الـ{" "}
             <span className="text-gradient-gold">AI Content Creation</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
               key={feature.title}

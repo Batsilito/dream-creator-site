@@ -14,16 +14,16 @@ import heroImage from "@/assets/hero-instructor.jpg";
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
             {/* Heading Group */}
             <div>
-              <h1 className="text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 كورس صناعة الفيديوهات{" "}
                 <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
               </h1>
-              <p className="text-5xl font-bold text-foreground">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                 من الصفر للاحتراف
               </p>
             </div>
@@ -53,7 +53,7 @@ import heroImage from "@/assets/hero-instructor.jpg";
           </div>
 
           {/* Hero Image */}
-          <div className="relative flex flex-col items-end gap-6">
+          <div className="relative flex flex-col items-center lg:items-end gap-6">
             {/* Instructor Image */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
@@ -64,8 +64,8 @@ import heroImage from "@/assets/hero-instructor.jpg";
               />
             </div>
             {/* Instructor Bio */}
-            <div className="text-right max-w-[22rem]">
-              <h3 className="text-5xl font-bold text-gradient-gold mb-3">
+            <div className="text-center max-w-[22rem]">
+              <h3 className="text-4xl md:text-5xl font-bold text-gradient-gold mb-3">
                 بسام إيهاب
               </h3>
               <p className="text-base text-primary font-medium mb-2">

@@ -39,7 +39,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
     <section id="courses" className="py-20 bg-card/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl font-bold">اختر خطتك</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">اختر خطتك</h2>
           <p className="text-muted-foreground">خيارات مرنة تناسب احتياجاتك</p>
           
           {/* Currency Toggle */}
@@ -67,7 +67,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           {plans.map((plan) => {
             const price = isEgypt ? plan.priceEGP : plan.priceUSD;
             
