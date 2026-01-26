@@ -42,7 +42,7 @@
                 variant="gold" 
                 size="xl" 
                 className="animate-pulse-glow"
-                onClick={onBookingClick}
+                onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 احجز مكانك الآن
               </Button>
