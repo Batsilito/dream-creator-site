@@ -7,7 +7,7 @@ interface AnimatedCounterProps {
   label: string;
 }
 
-const AnimatedCounter = ({ target, duration = 2000, label }: AnimatedCounterProps) => {
+const AnimatedCounter = ({ target, duration = 2000, label, className }: AnimatedCounterProps & { className?: string }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -48,7 +48,7 @@ const AnimatedCounter = ({ target, duration = 2000, label }: AnimatedCounterProp
   return (
     <div
       ref={ref}
-      className="bg-card/50 border border-border/50 rounded-2xl p-6 flex flex-col items-center justify-center space-y-4 backdrop-blur-sm"
+      className={`bg-card/50 border border-border/50 rounded-2xl p-6 flex flex-col items-center justify-center space-y-4 backdrop-blur-sm ${className || ''}`}
     >
       <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center">
         <Users className="w-7 h-7 text-primary" />
