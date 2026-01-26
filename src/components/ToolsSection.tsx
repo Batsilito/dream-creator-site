@@ -19,7 +19,7 @@ const ToolsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 space-y-4">
           <p className="text-primary font-medium">أدوات احترافية</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-4xl font-bold">
             أدوات <span className="text-gradient-gold">AI</span> هتتعلمها
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -27,7 +27,7 @@ const ToolsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-6 gap-6 max-w-4xl mx-auto">
           {tools.map((tool) => (
             <div
               key={tool.name}
