@@ -17,11 +17,12 @@
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              احترف صناعه الإعلانات{" "}
-              <span className="text-gradient-gold">والأفلام السينمائية</span>{" "}
-              بالذكاء الاصطناعي{" "}
-              <span className="text-muted-foreground">من الصفر للاحتراف</span>
+              كورس صناعة الفيديوهات{" "}
+              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
             </h1>
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
+              من الصفر للاحتراف
+            </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               بعد مشاركة أكثر من 1500 جرافيك ديزاينر قدر إنه يحترف ويتأهل لسوق العمل حقيقي
