@@ -48,7 +48,7 @@ const AnimatedCounter = ({ target, duration = 2000, label, className }: Animated
   return (
     <div
       ref={ref}
-      className={`bg-card/50 border border-border/50 rounded-xl px-4 py-2 flex items-center gap-3 backdrop-blur-sm ${className || ''}`}
+      className={`bg-card/50 border border-border/50 rounded-xl px-4 py-2 inline-flex items-center gap-3 backdrop-blur-sm w-fit ${className || ''}`}
     >
       <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
         <Users className="w-4 h-4 text-primary" />
