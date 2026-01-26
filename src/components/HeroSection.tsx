@@ -16,13 +16,16 @@
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2">
-              كورس صناعة الفيديوهات{" "}
-              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
-            </h1>
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
-              من الصفر للاحتراف
-            </p>
+            {/* Heading Group */}
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                كورس صناعة الفيديوهات{" "}
+                <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+              </h1>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
+                من الصفر للاحتراف
+              </p>
+            </div>
             
             <p className="text-lg text-foreground/90 leading-relaxed">
               انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
