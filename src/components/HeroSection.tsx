@@ -28,14 +28,13 @@ import heroImage from "@/assets/hero-instructor.jpg";
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <p className="text-lg text-foreground/90 leading-relaxed">
-                انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
-                <br />
-                باستخدام الذكاء الاصطناعي.
-              </p>
-              <AnimatedCounter target={500} label="مشترك في الكورس" />
-            </div>
+            <AnimatedCounter target={500} label="مشترك في الكورس" />
+            
+            <p className="text-lg text-foreground/90 leading-relaxed">
+              انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
+              <br />
+              باستخدام الذكاء الاصطناعي.
+            </p>
 
             {/* Countdown */}
             <CountdownTimer />
