@@ -17,11 +17,11 @@
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              كورس صناعة الفيديوهات{" "}
-              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+              <span className="text-foreground">كورس صناعة </span>
+              <span className="text-gradient-gold">الفيديوهات والإعلانات</span>
             </h1>
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
-              من الصفر للاحتراف
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              بالذكاء الاصطناعي من الصفر للاحتراف
             </p>
             
             <p className="text-lg text-foreground/90 leading-relaxed">
