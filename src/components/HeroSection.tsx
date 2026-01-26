@@ -54,7 +54,7 @@ import heroImage from "@/assets/hero-instructor.jpg";
           <div className="relative flex flex-col items-center lg:items-end gap-6">
             <div className="flex flex-col lg:flex-row items-center gap-6">
               {/* Animated Counter */}
-              <AnimatedCounter target={500} label="مشترك في الكورس" className="mt-4 mr-8" />
+              <AnimatedCounter target={500} label="مشترك في الكورس" className="mt-4" />
               
               {/* Instructor Image */}
               <div className="relative">
