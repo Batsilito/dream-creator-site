@@ -15,10 +15,10 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Desktop: 2 columns, Mobile: single column */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:min-h-[80vh]">
           
           {/* Mobile: Simplified hero (headline + counter + instructor name) */}
-          <div className="lg:hidden space-y-6 text-center animate-fade-in-up">
+          <div className="lg:hidden space-y-4 text-center animate-fade-in-up">
             <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
               كورس صناعة الفيديوهات{" "}
               <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
