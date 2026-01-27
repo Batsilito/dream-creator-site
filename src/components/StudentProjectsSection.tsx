@@ -33,27 +33,27 @@ const studentProjects = [
 ];
 
 const StudentProjectsSection = () => {
-  // Triple the projects for seamless loop
-  const tripleProjects = [...studentProjects, ...studentProjects, ...studentProjects];
-
   return (
-    <section className="py-12 lg:py-20 bg-background overflow-hidden">
+    <section className="py-12 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl lg:text-4xl font-bold text-center text-primary mb-8 lg:mb-12">
           مشاريع طلابنا
         </h2>
       </div>
       
-      <div className="relative w-full">
-        <div className="flex gap-3 lg:gap-6 animate-marquee-rtl hover:[animation-play-state:paused]">
-          {tripleProjects.map((project, index) => (
+      <div className="relative w-full px-4">
+        <div 
+          className="flex gap-3 lg:gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gold scrollbar-track-muted/30"
+          style={{ scrollbarColor: 'hsl(45 100% 50%) hsl(var(--muted) / 0.3)' }}
+        >
+          {studentProjects.map((project, index) => (
             <div
               key={index}
               className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg flex-shrink-0"
             >
               <img
                 src={project}
-                alt={`مشروع طالب ${(index % studentProjects.length) + 1}`}
+                alt={`مشروع طالب ${index + 1}`}
                 className="w-40 h-40 lg:w-56 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
