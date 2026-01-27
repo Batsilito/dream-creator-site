@@ -4,9 +4,10 @@ import { Check } from "lucide-react";
 
 interface PricingSectionProps {
   onBookingClick: () => void;
+  sectionId?: string;
 }
 
-const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
+const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectionProps) => {
   const [isEgypt, setIsEgypt] = useState(true);
 
   const plans = [
@@ -36,7 +37,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
   const currency = isEgypt ? "EGP" : "USD";
 
   return (
-    <section id="courses" className="py-12 lg:py-20 bg-card/30">
+    <section id={sectionId || undefined} className="py-12 lg:py-20 bg-card/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 lg:mb-12 space-y-3 lg:space-y-4">
           <h2 className="text-2xl lg:text-4xl font-bold">اختر خطتك</h2>

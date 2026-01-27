@@ -2,7 +2,9 @@ import { Button } from "@/components/ui/button";
 
 const FooterSection = () => {
   const scrollToPricing = () => {
-    document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" });
+    const isMobile = window.innerWidth < 1024;
+    const targetId = isMobile ? "courses-mobile" : "courses-desktop";
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
