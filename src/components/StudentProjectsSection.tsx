@@ -20,24 +20,25 @@ const studentProjects = [
 
 const StudentProjectsSection = () => {
   return (
-    <section className="py-12 lg:py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-primary">
+    <section className="py-12 lg:py-20 bg-background overflow-hidden">
+      <div className="container mx-auto px-4 mb-8 lg:mb-12">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center text-primary">
           مشاريع الطلاب
         </h2>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
-          {studentProjects.map((project, index) => (
+      </div>
+      
+      <div className="relative w-full">
+        <div className="flex animate-marquee-student gap-4">
+          {[...studentProjects, ...studentProjects, ...studentProjects].map((project, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg aspect-square group"
+              className="relative flex-shrink-0 w-40 h-40 lg:w-64 lg:h-64 overflow-hidden rounded-lg"
             >
               <img
                 src={project}
-                alt={`مشروع طالب ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                alt={`مشروع طالب ${(index % 8) + 1}`}
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
