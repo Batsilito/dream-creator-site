@@ -67,7 +67,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto items-stretch">
+        <div className="grid grid-cols-2 gap-3 lg:gap-8 max-w-4xl mx-auto items-stretch">
           {plans.map((plan) => {
             const price = isEgypt ? plan.priceEGP : plan.priceUSD;
             
