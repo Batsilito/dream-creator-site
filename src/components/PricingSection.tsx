@@ -40,7 +40,7 @@ const PricingSection = ({ onBookingClick }: PricingSectionProps) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 lg:mb-12 space-y-3 lg:space-y-4">
           <h2 className="text-2xl lg:text-4xl font-bold">اختر خطتك</h2>
-          <p className="text-sm lg:text-base text-muted-foreground">خيارات مرنة تناسب احتياجاتك</p>
+          <p className="text-sm lg:text-base text-muted-foreground">كورس مًسجل أو حضوري</p>
           
           {/* Currency Toggle */}
           <div className="flex items-center justify-center gap-2 mt-4 lg:mt-6">
