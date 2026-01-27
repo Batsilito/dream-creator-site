@@ -5,7 +5,6 @@ import PricingSection from "@/components/PricingSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import TargetAudienceSection from "@/components/TargetAudienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import StudentProjectsSection from "@/components/StudentProjectsSection";
 import FooterSection from "@/components/FooterSection";
 import BookingModal from "@/components/BookingModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -23,9 +22,9 @@ const Index = () => {
         <FeaturesSection />
         <TargetAudienceSection />
       </div>
-      <StudentProjectsSection />
       <TestimonialsSection />
       <FooterSection />
+      <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
       <WhatsAppButton />
     </div>
   );
