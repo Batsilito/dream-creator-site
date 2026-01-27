@@ -6,14 +6,14 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="py-12 bg-background border-t border-border">
+    <footer className="py-8 lg:py-12 bg-background border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center gap-6 text-center">
-          <a href="#" className="text-2xl font-bold">
+        <div className="flex flex-col items-center gap-4 lg:gap-6 text-center">
+          <a href="#" className="text-xl lg:text-2xl font-bold">
             Bassam<span className="text-gradient-gold">TalksAI</span>
           </a>
           
-          <p className="text-muted-foreground max-w-md">
+          <p className="text-sm lg:text-base text-muted-foreground max-w-md">
             احترف صناعة المحتوى بالذكاء الاصطناعي وابدأ رحلتك في عالم الإبداع
           </p>
           
@@ -21,7 +21,7 @@ const FooterSection = () => {
             احجز مكانك الآن
           </Button>
           
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6 text-xs lg:text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">
               الشروط والأحكام
             </a>
@@ -33,7 +33,7 @@ const FooterSection = () => {
             </a>
           </div>
           
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs lg:text-sm">
             © 2025 BassamTalksAI. جميع الحقوق محفوظة.
           </p>
         </div>

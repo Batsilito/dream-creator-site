@@ -17,8 +17,11 @@ const Index = () => {
       <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
       <PricingSection onBookingClick={() => setIsBookingOpen(true)} />
-      <FeaturesSection />
-      <TargetAudienceSection />
+      {/* Features and Target Audience hidden on mobile */}
+      <div className="hidden lg:block">
+        <FeaturesSection />
+        <TargetAudienceSection />
+      </div>
       <TestimonialsSection />
       <FooterSection />
       <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />

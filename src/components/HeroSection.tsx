@@ -3,21 +3,51 @@ import CountdownTimer from "./CountdownTimer";
 import AnimatedCounter from "./AnimatedCounter";
 import heroImage from "@/assets/hero-instructor.jpg";
  
- interface HeroSectionProps {
-   onBookingClick: () => void;
- }
- 
- const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
-   return (
+interface HeroSectionProps {
+  onBookingClick: () => void;
+}
+
+const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
+  return (
     <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Text Content */}
-          <div className="space-y-8 animate-fade-in-up">
-            {/* Heading Group */}
+        {/* Desktop: 2 columns, Mobile: single column */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+          
+          {/* Mobile: Simplified hero (headline + counter + instructor name) */}
+          <div className="lg:hidden space-y-6 text-center animate-fade-in-up">
+            <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+              كورس صناعة الفيديوهات{" "}
+              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+            </h1>
+            <p className="text-2xl sm:text-3xl font-bold text-foreground">
+              من الصفر للاحتراف
+            </p>
+            
+            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
+            
+            <h3 className="text-3xl font-bold text-gradient-gold">
+              بسام إيهاب
+            </h3>
+            <p className="text-sm text-primary font-medium">
+              خبير الذكاء الاصطناعي وصناعة المحتوى
+            </p>
+            
+            <Button 
+              variant="gold" 
+              size="lg" 
+              className="animate-pulse-glow w-full max-w-xs"
+              onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              احجز مكانك الآن
+            </Button>
+          </div>
+
+          {/* Desktop: Full content */}
+          <div className="hidden lg:block space-y-8 animate-fade-in-up">
             <div>
               <h1 className="text-6xl font-bold leading-tight">
                 كورس صناعة الفيديوهات{" "}
@@ -36,10 +66,8 @@ import heroImage from "@/assets/hero-instructor.jpg";
               باستخدام الذكاء الاصطناعي.
             </p>
 
-            {/* Countdown */}
             <CountdownTimer />
 
-            {/* CTA */}
             <div className="flex flex-row gap-4">
               <Button 
                 variant="gold" 
@@ -52,9 +80,8 @@ import heroImage from "@/assets/hero-instructor.jpg";
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative flex flex-col items-end gap-6">
-            {/* Instructor Image */}
+          {/* Hero Image - Desktop only */}
+          <div className="hidden lg:flex relative flex-col items-end gap-6">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
               <img
@@ -63,7 +90,6 @@ import heroImage from "@/assets/hero-instructor.jpg";
                 className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
               />
             </div>
-            {/* Instructor Bio */}
             <div className="text-center max-w-[22rem]">
               <h3 className="text-5xl font-bold text-gradient-gold mb-3">
                 بسام إيهاب
