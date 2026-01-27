@@ -19,8 +19,8 @@ const studentProjects = [
 ];
 
 const StudentProjectsSection = () => {
-  // Create a longer set to ensure seamless loop on wide screens
-  const baseSet = Array.from({ length: 24 }, (_, i) => studentProjects[i % studentProjects.length]);
+  // Use all 8 images twice for seamless loop
+  const baseSet = [...studentProjects, ...studentProjects];
 
   return (
     <section className="py-12 lg:py-20 bg-background overflow-hidden">
