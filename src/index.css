@@ -51,7 +51,10 @@
 
   html {
     direction: rtl;
-    zoom: 0.9;
+  }
+  
+  body {
+    min-width: 1280px;
   }
 
   body {
