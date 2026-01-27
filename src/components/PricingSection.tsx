@@ -16,7 +16,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
       description: "متاح في أي وقت",
       priceEGP: { original: 1500, discounted: 1000 },
       priceUSD: { original: 60, discounted: 40 },
-      features: ["الوصول للمحتوى المسجل", "تواصل مباشر للأسئلة", "شهادة إتمام"],
+      features: ["الوصول للمحتوى المسجل", "تواصل مباشر للأسئلة", "ميتنج متابعة اسبوعي", "شهادة إتمام"],
       popular: true,
     },
     {
