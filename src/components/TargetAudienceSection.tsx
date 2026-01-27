@@ -40,7 +40,7 @@ const TargetAudienceSection = () => {
         <div className="text-center space-y-4">
           <p className="text-primary font-medium text-xl">الكورس ده لمين؟</p>
           <h2 className="text-4xl font-bold">
-            كورس <span className="text-gradient-gold">مُسجل</span> أو <span className="text-gradient-gold">حضوري</span>
+            الكورس مناسب لـ<span className="text-gradient-gold">كل المستويات</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             سواء كنت مبتدئ أو متوسط، الكورس مصمم خصيصاً علشان يساعدك تحقق أهدافك
