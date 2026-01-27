@@ -40,16 +40,16 @@ const StudentProjectsSection = () => {
           مشاريع طلابنا
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
+        <div className="flex gap-3 lg:gap-6 overflow-x-auto pb-4 scrollbar-hide">
           {studentProjects.map((project, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg hover:shadow-xl transition-all duration-300"
+              className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
             >
               <img
                 src={project}
                 alt={`مشروع طالب ${index + 1}`}
-                className="w-full h-40 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-40 h-40 lg:w-56 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
