@@ -19,8 +19,10 @@ const studentProjects = [
 ];
 
 const StudentProjectsSection = () => {
-  // Duplicate enough times to ensure seamless loop
-  const duplicatedProjects = [...studentProjects, ...studentProjects, ...studentProjects, ...studentProjects];
+  // Ensure the track is always wider than the viewport to avoid empty gaps.
+  // One "set" is 12 items, repeated twice so 0% and 50% positions look identical.
+  const baseSet = Array.from({ length: 12 }, (_, i) => studentProjects[i % studentProjects.length]);
+  const trackItems = [...baseSet, ...baseSet];
 
   return (
     <section className="py-12 lg:py-20 bg-background overflow-hidden">
@@ -30,15 +32,9 @@ const StudentProjectsSection = () => {
         </h2>
       </div>
       
-      <div className="relative w-full">
-        <div 
-          className="flex gap-4"
-          style={{
-            animation: 'scroll-left 30s linear infinite',
-            width: 'max-content',
-          }}
-        >
-          {duplicatedProjects.map((project, index) => (
+      <div className="relative w-full overflow-hidden">
+        <div className="flex w-max gap-4 animate-marquee-student motion-reduce:animate-none">
+          {trackItems.map((project, index) => (
             <div
               key={index}
               className="relative flex-shrink-0 w-40 h-40 lg:w-64 lg:h-64 overflow-hidden rounded-lg"
@@ -52,17 +48,6 @@ const StudentProjectsSection = () => {
           ))}
         </div>
       </div>
-
-      <style>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 };
