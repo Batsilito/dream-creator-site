@@ -54,7 +54,7 @@ const StudentProjectsSection = () => {
               <img
                 src={project}
                 alt={`مشروع طالب ${(index % studentProjects.length) + 1}`}
-                className="w-40 h-40 lg:w-56 lg:h-56 object-cover"
+                className="w-40 h-40 lg:w-56 lg:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}
