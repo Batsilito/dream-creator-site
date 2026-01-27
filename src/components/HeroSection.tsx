@@ -40,7 +40,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               variant="gold" 
               size="lg" 
               className="animate-pulse-glow w-full max-w-xs"
-              onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
             >
               احجز مكانك الآن
             </Button>
@@ -73,7 +73,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
                 variant="gold" 
                 size="xl" 
                 className="animate-pulse-glow"
-                onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('courses-desktop')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 احجز مكانك الآن
               </Button>
