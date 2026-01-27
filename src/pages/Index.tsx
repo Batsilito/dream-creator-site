@@ -17,10 +17,13 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
-      {/* Mobile: Pricing first, Desktop: Features first then Pricing */}
+      {/* Mobile: Same order as desktop - Features, Target Audience, then Pricing */}
       <div className="lg:hidden">
+        <FeaturesSection />
+        <TargetAudienceSection />
         <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-mobile" />
       </div>
+      {/* Desktop */}
       <div className="hidden lg:block">
         <FeaturesSection />
         <TargetAudienceSection />
