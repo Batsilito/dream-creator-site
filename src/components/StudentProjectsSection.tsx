@@ -33,25 +33,29 @@ const studentProjects = [
 ];
 
 const StudentProjectsSection = () => {
+  // Triple the projects for seamless loop
+  const tripleProjects = [...studentProjects, ...studentProjects, ...studentProjects];
+
   return (
-    <section className="py-12 lg:py-20 bg-background">
+    <section className="py-12 lg:py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl lg:text-4xl font-bold text-center text-primary mb-8 lg:mb-12">
           مشاريع طلابنا
         </h2>
-        
-        <div className="flex gap-3 lg:gap-6 overflow-x-auto pb-4 scrollbar-hide">
-          {studentProjects.map((project, index) => (
+      </div>
+      
+      <div className="relative w-full">
+        <div className="flex gap-3 lg:gap-6 animate-marquee-rtl">
+          {tripleProjects.map((project, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
+              className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg flex-shrink-0"
             >
               <img
                 src={project}
-                alt={`مشروع طالب ${index + 1}`}
-                className="w-40 h-40 lg:w-56 lg:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                alt={`مشروع طالب ${(index % studentProjects.length) + 1}`}
+                className="w-40 h-40 lg:w-56 lg:h-56 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
