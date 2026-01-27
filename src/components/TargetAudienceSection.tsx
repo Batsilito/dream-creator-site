@@ -35,10 +35,10 @@ const audiences = [
 
 const TargetAudienceSection = () => {
   return (
-    <section className="py-20 bg-card/30">
+    <section className="py-12 pb-6 bg-card/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 space-y-4">
-          <p className="text-primary font-medium">الكورس ده لمين؟</p>
+        <div className="text-center space-y-4">
+          <p className="text-primary font-medium text-xl">الكورس ده لمين؟</p>
           <h2 className="text-4xl font-bold">
             الكورس مناسب لـ<span className="text-gradient-gold">كل المستويات</span>
           </h2>
