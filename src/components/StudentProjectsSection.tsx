@@ -45,7 +45,7 @@ const StudentProjectsSection = () => {
       </div>
       
       <div className="relative w-full">
-        <div className="flex gap-3 lg:gap-6 animate-marquee-rtl">
+        <div className="flex gap-3 lg:gap-6 animate-marquee hover:pause-animation">
           {tripleProjects.map((project, index) => (
             <div
               key={index}
