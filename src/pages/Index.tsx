@@ -23,7 +23,6 @@ const Index = () => {
       </div>
       <div className="hidden lg:block">
         <FeaturesSection />
-        <TargetAudienceSection />
         <PricingSection onBookingClick={() => setIsBookingOpen(true)} />
       </div>
       <StudentProjectsSection />
