@@ -19,9 +19,8 @@ const studentProjects = [
 ];
 
 const StudentProjectsSection = () => {
-  // Ensure the track is always wider than the viewport to avoid empty gaps.
-  // One "set" is 12 items, repeated twice so 0% and 50% positions look identical.
-  const baseSet = Array.from({ length: 12 }, (_, i) => studentProjects[i % studentProjects.length]);
+  // Create a longer set to ensure seamless loop on wide screens
+  const baseSet = Array.from({ length: 24 }, (_, i) => studentProjects[i % studentProjects.length]);
 
   return (
     <section className="py-12 lg:py-20 bg-background overflow-hidden">
