@@ -87,17 +87,19 @@ const FeaturesSection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group bg-card border border-border rounded-2xl p-6 space-y-4 transition-all hover:border-primary/50 hover:bg-card/80"
+              className="group bg-card border border-border rounded-2xl p-4 lg:p-6 flex flex-row lg:flex-col items-center lg:items-start gap-4 lg:gap-0 lg:space-y-4 transition-all hover:border-primary/50 hover:bg-card/80"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              <div className="w-12 h-12 shrink-0 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-lg font-bold">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+              <div className="flex-1 text-right lg:text-left">
+                <h3 className="text-base lg:text-lg font-bold">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>
