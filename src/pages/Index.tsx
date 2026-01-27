@@ -18,13 +18,13 @@ const Index = () => {
       <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
       {/* Mobile: Pricing first, Desktop: Features first then Pricing */}
-      <div id="courses-mobile" className="lg:hidden">
-        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="" />
+      <div className="lg:hidden">
+        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-mobile" />
       </div>
-      <div id="courses-desktop" className="hidden lg:block">
+      <div className="hidden lg:block">
         <FeaturesSection />
         <TargetAudienceSection />
-        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="" />
+        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-desktop" />
       </div>
       <StudentProjectsSection />
       <TestimonialsSection />
