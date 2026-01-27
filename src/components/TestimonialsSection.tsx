@@ -70,7 +70,6 @@ const TestimonialsSection = () => {
     <section className="py-12 lg:py-20 bg-card/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 lg:mb-12 space-y-3 lg:space-y-4">
-          <p className="text-primary font-medium text-sm lg:text-base">آراء الطلاب</p>
           <h2 className="text-2xl lg:text-4xl font-bold">
             آراء الطلاب <span className="text-gradient-gold">والمتدربين</span>
           </h2>
