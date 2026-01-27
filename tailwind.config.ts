@@ -84,7 +84,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "marquee": "marquee 30s linear infinite",
         "marquee-slow": "marquee 45s linear infinite",
-        "marquee-student": "marquee-student 25s linear infinite",
+        "marquee-student": "marquee-student 20s linear infinite",
       },
     },
   },
