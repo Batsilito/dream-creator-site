@@ -9,13 +9,13 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-screen pt-20 lg:pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Desktop: 2 columns, Mobile: single column */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center lg:min-h-[80vh]">
           
           {/* Mobile: Simplified hero (headline + counter + instructor name) */}
           <div className="lg:hidden space-y-6 text-center animate-fade-in-up">
