@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-0 lg:min-h-screen pt-14 lg:pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen pt-20 lg:pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
