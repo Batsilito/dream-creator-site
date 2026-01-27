@@ -33,7 +33,7 @@ const StudentProjectsSection = () => {
       <div className="relative w-full overflow-hidden">
         <div className="flex w-max animate-marquee-student motion-reduce:animate-none">
           {/* First half */}
-          <div className="flex gap-4 pr-4">
+          <div className="flex gap-4 pr-4 border-4 border-red-500">
             {baseSet.map((project, index) => (
               <div
                 key={`a-${index}`}
@@ -49,7 +49,7 @@ const StudentProjectsSection = () => {
           </div>
 
           {/* Second half (duplicate) — aria-hidden to avoid repeating for screen readers */}
-          <div className="flex gap-4 pr-4" aria-hidden="true">
+          <div className="flex gap-4 pr-4 border-4 border-blue-500" aria-hidden="true">
             {baseSet.map((project, index) => (
               <div
                 key={`b-${index}`}
