@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
       </div>
 
       {/* Scrollable Container */}
-      <div className="relative w-full overflow-x-auto pb-4 scrollbar-hide">
+      <div className="relative w-full overflow-x-auto pb-4 scrollbar-yellow">
         <div className="flex gap-4 lg:gap-6 px-4">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
