@@ -47,20 +47,6 @@ const TargetAudienceSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {audiences.map((item) => (
-            <div
-              key={item.title}
-              className="bg-card border border-border rounded-2xl p-6 space-y-4 transition-all hover:border-primary/50"
-            >
-              <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <item.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="text-muted-foreground">{item.description}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
