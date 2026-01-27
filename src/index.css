@@ -78,6 +78,10 @@
   .card-gradient {
     background: var(--card-gradient);
   }
+
+  .hover\:pause-animation:hover {
+    animation-play-state: paused;
+  }
 }
 
 /* Animations */
