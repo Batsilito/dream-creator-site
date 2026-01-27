@@ -76,7 +76,7 @@ export default {
         },
         "marquee-student": {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-100% / 3))" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {

@@ -27,9 +27,9 @@ const StudentProjectsSection = () => {
         </h2>
       </div>
       
-      <div className="relative w-full">
-        <div className="flex animate-marquee-student gap-4">
-          {[...studentProjects, ...studentProjects, ...studentProjects].map((project, index) => (
+      <div className="relative w-full overflow-hidden">
+        <div className="flex w-max animate-marquee-student gap-4">
+          {[...studentProjects, ...studentProjects].map((project, index) => (
             <div
               key={index}
               className="relative flex-shrink-0 w-40 h-40 lg:w-64 lg:h-64 overflow-hidden rounded-lg"
