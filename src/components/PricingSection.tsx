@@ -13,7 +13,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
   const plans = [
     {
       name: "كورس أونلاين مُسجل",
-      description: "متاح في أي وقت",
+      description: "متاح في أي وقت - بعد الاشتراك يتم استلام رابط الكورس عالإيميل",
       priceEGP: { original: 1500, discounted: 1000 },
       priceUSD: { original: 60, discounted: 40 },
       features: ["الوصول للمحتوى المسجل", "تواصل مباشر للأسئلة", "ميتنج متابعة اسبوعي", "شهادة إتمام"],
