@@ -7,6 +7,12 @@ import studentWork6 from "@/assets/student-work-6.jpeg";
 import studentWork7 from "@/assets/student-work-7.jpeg";
 import studentWork8 from "@/assets/student-work-8.jpeg";
 import studentWork9 from "@/assets/student-work-9.jpeg";
+import studentWork10 from "@/assets/student-work-10.jpeg";
+import studentWork11 from "@/assets/student-work-11.jpeg";
+import studentWork12 from "@/assets/student-work-12.jpeg";
+import studentWork13 from "@/assets/student-work-13.jpeg";
+import studentWork14 from "@/assets/student-work-14.jpeg";
+import studentWork15 from "@/assets/student-work-15.jpeg";
 
 const studentProjects = [
   studentWork1,
@@ -18,6 +24,12 @@ const studentProjects = [
   studentWork7,
   studentWork8,
   studentWork9,
+  studentWork10,
+  studentWork11,
+  studentWork12,
+  studentWork13,
+  studentWork14,
+  studentWork15,
 ];
 
 const StudentProjectsSection = () => {
