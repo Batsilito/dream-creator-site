@@ -38,7 +38,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
           </div>
 
           {/* Desktop: Full content */}
-          <div className="hidden lg:block space-y-8 animate-fade-in-up">
+          <div className="hidden lg:flex flex-col items-center text-center space-y-8 animate-fade-in-up justify-center">
             <div>
               <h1 className="text-6xl font-bold leading-tight">
                 كورس صناعة الفيديوهات{" "}
@@ -49,7 +49,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               </p>
             </div>
             
-            <AnimatedCounter target={500} label="مشترك في الكورس" />
+            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center" />
             
             <p className="text-lg text-foreground/90 leading-relaxed">
               انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
