@@ -1,11 +1,21 @@
 import { useState, useEffect } from "react";
 
-// Same target date as CountdownTimer
-const TARGET_DATE = new Date("2026-02-01T23:59:59").getTime();
+const FORTY_EIGHT_HOURS = 48 * 60 * 60 * 1000;
+const STORAGE_KEY = "offer_end_time";
 
-const calculateTimeLeft = () => {
-  const now = new Date().getTime();
-  const difference = TARGET_DATE - now;
+const getTargetDate = () => {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    return parseInt(stored, 10);
+  }
+  const endTime = Date.now() + FORTY_EIGHT_HOURS;
+  localStorage.setItem(STORAGE_KEY, endTime.toString());
+  return endTime;
+};
+
+const calculateTimeLeft = (targetDate: number) => {
+  const now = Date.now();
+  const difference = targetDate - now;
 
   if (difference <= 0) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -20,16 +30,17 @@ const calculateTimeLeft = () => {
 };
 
 const OfferBanner = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+  const [targetDate] = useState(() => getTargetDate());
+  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(targetDate));
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   // Show notification every 60 seconds
   useEffect(() => {
