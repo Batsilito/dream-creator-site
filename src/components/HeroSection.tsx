@@ -25,7 +25,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
             </p>
             
-            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
+            <AnimatedCounter className="justify-center mx-auto" />
             
             <Button 
               variant="gold" 
@@ -49,7 +49,7 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               </p>
             </div>
             
-            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center" />
+            <AnimatedCounter className="justify-center" />
             
             <p className="text-xl text-foreground/90 leading-relaxed">
               انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
