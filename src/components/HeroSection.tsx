@@ -13,32 +13,64 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Mobile: single column */}
-        <div className="lg:hidden space-y-4 text-center animate-fade-in-up">
-          <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
-            كورس صناعة الفيديوهات{" "}
-            <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
-          </h1>
-          <p className="text-base sm:text-lg text-foreground/90">
-            كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
-          </p>
+        {/* Desktop: 2 columns, Mobile: single column */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:min-h-[80vh]">
           
-          <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
-          
-          <Button 
-            variant="gold" 
-            size="lg" 
-            className="animate-pulse-glow w-full max-w-xs"
-            onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            احجز مكانك الآن
-          </Button>
-        </div>
+          <div className="lg:hidden space-y-4 text-center animate-fade-in-up">
+            <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+              كورس صناعة الفيديوهات{" "}
+              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+            </h1>
+            <p className="text-base sm:text-lg text-foreground/90">
+              كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
+            </p>
+            
+            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
+            
+            <Button 
+              variant="gold" 
+              size="lg" 
+              className="animate-pulse-glow w-full max-w-xs"
+              onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              احجز مكانك الآن
+            </Button>
+          </div>
 
-        {/* Desktop: 2 columns */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center lg:min-h-[80vh]">
-          {/* Instructor section - appears on right in RTL */}
-          <div className="flex flex-col items-center gap-6 animate-fade-in-up">
+          {/* Desktop: Full content */}
+          <div className="hidden lg:block space-y-8 animate-fade-in-up">
+            <div>
+              <h1 className="text-6xl font-bold leading-tight">
+                كورس صناعة الفيديوهات{" "}
+                <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+              </h1>
+              <p className="text-xl text-foreground/90 mt-4">
+                كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
+              </p>
+            </div>
+            
+            <AnimatedCounter target={500} label="مشترك في الكورس" />
+            
+            <p className="text-lg text-foreground/90 leading-relaxed">
+              انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
+              <br />
+              باستخدام الذكاء الاصطناعي.
+            </p>
+
+            <div className="flex flex-row gap-4">
+              <Button 
+                variant="gold" 
+                size="xl" 
+                className="animate-pulse-glow"
+                onClick={() => document.getElementById('courses-desktop')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                احجز مكانك الآن
+              </Button>
+            </div>
+          </div>
+
+          {/* Hero Image - Desktop only */}
+          <div className="hidden lg:flex relative flex-col items-end gap-6">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
               <img
@@ -58,36 +90,6 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
                 متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
               </p>
             </div>
-          </div>
-
-          {/* Course content - appears on left in RTL */}
-          <div className="flex flex-col items-center text-center space-y-8 animate-fade-in-up">
-            <div>
-              <h1 className="text-6xl font-bold leading-tight">
-                كورس صناعة الفيديوهات{" "}
-                <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
-              </h1>
-              <p className="text-xl text-foreground/90 mt-4">
-                كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
-              </p>
-            </div>
-            
-            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center" />
-            
-            <p className="text-lg text-foreground/90 leading-relaxed">
-              انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
-              <br />
-              باستخدام الذكاء الاصطناعي.
-            </p>
-
-            <Button 
-              variant="gold" 
-              size="xl" 
-              className="animate-pulse-glow"
-              onClick={() => document.getElementById('courses-desktop')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              احجز مكانك الآن
-            </Button>
           </div>
         </div>
       </div>
