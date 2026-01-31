@@ -40,18 +40,18 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
           {/* Desktop: Full content */}
           <div className="hidden lg:flex flex-col items-center text-center space-y-8 animate-fade-in-up justify-center">
             <div>
-              <h1 className="text-6xl font-bold leading-tight">
+              <h1 className="text-7xl font-bold leading-tight">
                 كورس صناعة الفيديوهات{" "}
                 <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
               </h1>
-              <p className="text-xl text-foreground/90 mt-4">
+              <p className="text-2xl text-foreground/90 mt-4">
                 كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
               </p>
             </div>
             
             <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center" />
             
-            <p className="text-lg text-foreground/90 leading-relaxed">
+            <p className="text-xl text-foreground/90 leading-relaxed">
               انضمّ إلى متعلمين حوّلوا أفكارهم إلى صور وفيديوهات وإعلانات
               <br />
               باستخدام الذكاء الاصطناعي.
