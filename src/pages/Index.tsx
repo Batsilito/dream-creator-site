@@ -9,12 +9,14 @@ import StudentProjectsSection from "@/components/StudentProjectsSection";
 import FooterSection from "@/components/FooterSection";
 import BookingModal from "@/components/BookingModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import OfferBanner from "@/components/OfferBanner";
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-12">
+      <OfferBanner />
       <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
       {/* Mobile: Same order as desktop - Features, Target Audience, then Pricing */}
