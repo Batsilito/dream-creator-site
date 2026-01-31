@@ -42,11 +42,12 @@ const OfferBanner = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  // Show notification every 60 seconds
+  // Show notification every 60 seconds, starting after 1 minute
   useEffect(() => {
-    // Show immediately on mount
-    setShowNotification(true);
-    const hideTimeout = setTimeout(() => setShowNotification(false), 5000);
+    const firstShowTimeout = setTimeout(() => {
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 5000);
+    }, 60000);
 
     const notificationInterval = setInterval(() => {
       setShowNotification(true);
@@ -54,8 +55,8 @@ const OfferBanner = () => {
     }, 60000);
 
     return () => {
+      clearTimeout(firstShowTimeout);
       clearInterval(notificationInterval);
-      clearTimeout(hideTimeout);
     };
   }, []);
 
