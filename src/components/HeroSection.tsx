@@ -21,8 +21,8 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               كورس صناعة الفيديوهات{" "}
               <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
             </h1>
-            <p className="text-2xl sm:text-3xl font-bold text-foreground">
-              من الصفر للاحتراف
+            <p className="text-base sm:text-lg text-foreground/90">
+              كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
             </p>
             
             <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
@@ -44,8 +44,8 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
                 كورس صناعة الفيديوهات{" "}
                 <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
               </h1>
-              <p className="text-5xl font-bold text-foreground">
-                من الصفر للاحتراف
+              <p className="text-xl text-foreground/90 mt-4">
+                كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
               </p>
             </div>
             
