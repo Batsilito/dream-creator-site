@@ -24,7 +24,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-        <Button variant="gold" size="sm" onClick={scrollToPricing}>
+        <Button variant="gold" size="sm" onClick={scrollToPricing} className="hidden lg:inline-flex">
           احجز الآن
         </Button>
       </div>
