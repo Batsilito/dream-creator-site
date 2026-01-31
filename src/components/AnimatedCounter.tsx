@@ -70,7 +70,7 @@ const AnimatedCounter = ({ duration = 2000, className }: AnimatedCounterProps) =
       ref={ref}
       className={`bg-card/50 border border-border/50 rounded-xl px-4 py-2 inline-flex items-center backdrop-blur-sm w-fit transition-all duration-300 ${currentIndex === 0 ? 'gap-3' : 'gap-0'} ${className || ''}`}
     >
-      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center shrink-0 mr-2">
+      <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
         {currentStat.icon}
       </div>
       <div dir="ltr" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent min-w-[60px]">
