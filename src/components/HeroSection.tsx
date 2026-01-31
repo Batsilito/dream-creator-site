@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import CountdownTimer from "./CountdownTimer";
 import AnimatedCounter from "./AnimatedCounter";
 import heroImage from "@/assets/hero-instructor.jpg";
  
@@ -57,8 +56,6 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
               <br />
               باستخدام الذكاء الاصطناعي.
             </p>
-
-            <CountdownTimer />
 
             <div className="flex flex-row gap-4">
               <Button 
