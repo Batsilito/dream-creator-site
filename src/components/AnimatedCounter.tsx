@@ -76,7 +76,7 @@ const AnimatedCounter = ({ duration = 2000, className }: AnimatedCounterProps) =
       <div dir="ltr" className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-amber-400 to-orange-500 bg-clip-text text-transparent min-w-[60px]">
         {currentStat.target > 0 ? `${count}+` : ""}
       </div>
-      <p className="text-muted-foreground text-sm whitespace-nowrap">
+      <p className="text-2xl md:text-3xl font-bold text-foreground whitespace-nowrap">
         {currentStat.target > 0 ? currentStat.label : `أكثر من ${currentStat.label}`}
       </p>
     </div>
