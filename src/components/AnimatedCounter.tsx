@@ -9,7 +9,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { target: 500, label: "مشترك في الكورس", icon: <Users className="w-4 h-4 text-primary" /> },
-  { target: 10, label: "فصل", icon: <BookOpen className="w-4 h-4 text-primary" /> },
+  { target: 11, label: "فصل", icon: <BookOpen className="w-4 h-4 text-primary" /> },
   { target: 5, label: "سنة خبرة", icon: <Clock className="w-4 h-4 text-primary" /> },
   { target: 0, label: "محتوى متجدد", icon: <Sparkles className="w-4 h-4 text-primary" /> },
 ];
