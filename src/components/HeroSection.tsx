@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import AnimatedCounter from "./AnimatedCounter";
+import heroImage from "@/assets/hero-instructor.jpg";
  
 interface HeroSectionProps {
   onBookingClick: () => void;
@@ -12,32 +13,55 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card" />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Single column layout, centered */}
-        <div className="flex flex-col items-center justify-center lg:min-h-[80vh]">
+        {/* Mobile: single column */}
+        <div className="lg:hidden space-y-4 text-center animate-fade-in-up">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
+            كورس صناعة الفيديوهات{" "}
+            <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
+          </h1>
+          <p className="text-base sm:text-lg text-foreground/90">
+            كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
+          </p>
           
-          <div className="lg:hidden space-y-4 text-center animate-fade-in-up">
-            <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
-              كورس صناعة الفيديوهات{" "}
-              <span className="text-gradient-gold">والإعلانات بالذكاء الاصطناعي</span>
-            </h1>
-            <p className="text-base sm:text-lg text-foreground/90">
-              كورس عملي يأخذك من الأساسيات إلى أول فيديو ليك بخطوات بسيطة وواضحة.
-            </p>
-            
-            <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
-            
-            <Button 
-              variant="gold" 
-              size="lg" 
-              className="animate-pulse-glow w-full max-w-xs"
-              onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              احجز مكانك الآن
-            </Button>
+          <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
+          
+          <Button 
+            variant="gold" 
+            size="lg" 
+            className="animate-pulse-glow w-full max-w-xs"
+            onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            احجز مكانك الآن
+          </Button>
+        </div>
+
+        {/* Desktop: 2 columns */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center lg:min-h-[80vh]">
+          {/* Instructor section - appears on right in RTL */}
+          <div className="flex flex-col items-center gap-6 animate-fade-in-up">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl blur-3xl" />
+              <img
+                src={heroImage}
+                alt="مدرب الدورة"
+                className="relative z-10 w-full max-w-[22rem] aspect-[3/4] rounded-3xl glow-gold-strong object-cover object-[48%_top]"
+              />
+            </div>
+            <div className="text-center max-w-[22rem]">
+              <h3 className="text-5xl font-bold text-gradient-gold mb-3">
+                بسام إيهاب
+              </h3>
+              <p className="text-base text-primary font-medium mb-2">
+                خبير الذكاء الاصطناعي وصناعة المحتوى
+              </p>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                متخصص في تحويل أدوات الذكاء الاصطناعي إلى صور، فيديوهات، ومشاريع إبداعية قابلة للتطبيق في الإعلانات والسوشيال ميديا.
+              </p>
+            </div>
           </div>
 
-          {/* Desktop: Full content - centered */}
-          <div className="hidden lg:flex flex-col items-center text-center space-y-8 animate-fade-in-up max-w-4xl">
+          {/* Course content - appears on left in RTL */}
+          <div className="flex flex-col items-center text-center space-y-8 animate-fade-in-up">
             <div>
               <h1 className="text-6xl font-bold leading-tight">
                 كورس صناعة الفيديوهات{" "}
