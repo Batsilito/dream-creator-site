@@ -26,6 +26,15 @@ const HeroSection = ({ onBookingClick }: HeroSectionProps) => {
             </p>
             
             <AnimatedCounter target={500} label="مشترك في الكورس" className="justify-center mx-auto" />
+            
+            <Button 
+              variant="gold" 
+              size="lg" 
+              className="animate-pulse-glow w-full max-w-xs"
+              onClick={() => document.getElementById('courses-mobile')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              احجز مكانك الآن
+            </Button>
           </div>
 
           {/* Desktop: Full content */}
