@@ -16,7 +16,7 @@ const Navbar = () => {
           </a>
           {/* Desktop nav links - hidden on mobile since those sections are hidden */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="#course-content" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#course-content" onClick={(e) => { e.preventDefault(); document.getElementById('course-content')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               محتوى الكورس
             </a>
             <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
