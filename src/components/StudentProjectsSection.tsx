@@ -45,11 +45,11 @@ const StudentProjectsSection = () => {
       </div>
       
       <div className="relative w-full">
-        <div className="flex gap-3 lg:gap-6 animate-marquee hover:pause-animation">
+        <div className="flex animate-marquee hover:pause-animation">
           {tripleProjects.map((project, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-lg border border-border bg-card shadow-lg flex-shrink-0"
+              className="relative group overflow-hidden flex-shrink-0"
             >
               <img
                 src={project}
