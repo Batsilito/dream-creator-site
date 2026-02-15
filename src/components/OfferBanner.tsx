@@ -63,16 +63,20 @@ const OfferBanner = () => {
     } catch (e) {}
   };
 
+  // Play sound when notification becomes visible
+  useEffect(() => {
+    if (showNotification) {
+      playRingSound();
+      const hideTimeout = setTimeout(() => setShowNotification(false), 5000);
+      return () => clearTimeout(hideTimeout);
+    }
+  }, [showNotification]);
+
   // Show notification every 60 seconds, starting after 1 minute
   useEffect(() => {
-    const showWithSound = () => {
-      setShowNotification(true);
-      playRingSound();
-      setTimeout(() => setShowNotification(false), 5000);
-    };
-
-    const firstShowTimeout = setTimeout(showWithSound, 60000);
-    const notificationInterval = setInterval(showWithSound, 60000);
+    const show = () => setShowNotification(true);
+    const firstShowTimeout = setTimeout(show, 60000);
+    const notificationInterval = setInterval(show, 60000);
 
     return () => {
       clearTimeout(firstShowTimeout);
