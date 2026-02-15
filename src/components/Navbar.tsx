@@ -19,9 +19,6 @@ const Navbar = () => {
             <a href="#course-content" onClick={(e) => { e.preventDefault(); document.getElementById('course-content')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
               محتوى الكورس
             </a>
-            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-              من نحن
-            </a>
           </div>
         </div>
         <Button variant="gold" size="sm" onClick={scrollToPricing} className="hidden lg:inline-flex">
