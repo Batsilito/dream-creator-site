@@ -23,17 +23,6 @@ const FooterSection = () => {
             احجز مكانك الآن
           </Button>
           
-          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6 text-xs lg:text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
-              الشروط والأحكام
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              سياسة الخصوصية
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              تواصل معنا
-            </a>
-          </div>
           
           <p className="text-muted-foreground text-xs lg:text-sm">
             © 2025 BassamTalksAI. جميع الحقوق محفوظة.
