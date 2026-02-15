@@ -25,7 +25,7 @@ const FooterSection = () => {
           
           
           <p className="text-muted-foreground text-xs lg:text-sm">
-            © 2025 BassamTalksAI. جميع الحقوق محفوظة.
+            © 2026 BassamTalksAI. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>
