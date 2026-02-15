@@ -42,17 +42,37 @@ const OfferBanner = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const playRingSound = () => {
+    try {
+      const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const playTone = (freq: number, start: number, duration: number) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.3, ctx.currentTime + start);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + start + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + start);
+        osc.stop(ctx.currentTime + start + duration);
+      };
+      playTone(800, 0, 0.15);
+      playTone(1000, 0.18, 0.15);
+      playTone(1200, 0.36, 0.2);
+    } catch (e) {}
+  };
+
   // Show notification every 60 seconds, starting after 1 minute
   useEffect(() => {
-    const firstShowTimeout = setTimeout(() => {
+    const showWithSound = () => {
       setShowNotification(true);
+      playRingSound();
       setTimeout(() => setShowNotification(false), 5000);
-    }, 60000);
+    };
 
-    const notificationInterval = setInterval(() => {
-      setShowNotification(true);
-      setTimeout(() => setShowNotification(false), 5000);
-    }, 60000);
+    const firstShowTimeout = setTimeout(showWithSound, 60000);
+    const notificationInterval = setInterval(showWithSound, 60000);
 
     return () => {
       clearTimeout(firstShowTimeout);
