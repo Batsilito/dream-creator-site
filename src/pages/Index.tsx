@@ -19,15 +19,14 @@ const Index = () => {
       <OfferBanner />
       <Navbar />
       <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
-      {/* Mobile: Same order as desktop - Features, Target Audience, then Pricing */}
+      <FeaturesSection />
+      {/* Mobile */}
       <div className="lg:hidden">
-        <FeaturesSection />
         <TargetAudienceSection />
         <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-mobile" />
       </div>
       {/* Desktop */}
       <div className="hidden lg:block">
-        <FeaturesSection />
         <TargetAudienceSection />
         <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-desktop" />
       </div>
