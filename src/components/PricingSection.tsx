@@ -23,7 +23,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
       name: "كورس أونلاين حضوري",
       description: "جلسات حية مباشرة من خلال Google Meets",
       priceEGP: { original: 6000, discounted: 2500 },
-      priceUSD: { original: 200, discounted: 80 },
+      priceUSD: { original: 230, discounted: 92 },
       features: [
         "الوصول للمحتوى المسجل",
         "تواصل مباشر للأسئلة",
