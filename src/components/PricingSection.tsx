@@ -14,16 +14,16 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
     {
       name: "كورس أونلاين مُسجل",
       description: "متاح في أي وقت - بعد الاشتراك يتم استلام رابط الكورس عالإيميل",
-      priceEGP: { original: 1500, discounted: 1000 },
-      priceUSD: { original: 60, discounted: 40 },
+      priceEGP: { original: 4000, discounted: 1500 },
+      priceUSD: { original: 100, discounted: 40 },
       features: ["الوصول للمحتوى المسجل", "تواصل مباشر للأسئلة", "ميتنج متابعة اسبوعي", "شهادة إتمام"],
       popular: true,
     },
     {
       name: "كورس أونلاين حضوري",
       description: "جلسات حية مباشرة من خلال Google Meets",
-      priceEGP: { original: 3000, discounted: 2000 },
-      priceUSD: { original: 120, discounted: 80 },
+      priceEGP: { original: 6000, discounted: 2500 },
+      priceUSD: { original: 200, discounted: 80 },
       features: [
         "الوصول للمحتوى المسجل",
         "تواصل مباشر للأسئلة",
@@ -102,7 +102,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
                     </span>
                     <span className="text-muted-foreground text-sm lg:text-base">{currency}</span>
                     <span className="text-destructive text-xs lg:text-sm font-medium">
-                      خصم 33%!
+                      خصم 60%!
                     </span>
                   </p>
                 </div>
