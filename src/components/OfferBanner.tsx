@@ -111,7 +111,7 @@ const OfferBanner = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-center gap-2 text-sm lg:text-base flex-wrap">
             <span className="text-foreground">خصم</span>
-            <span className="text-primary font-bold text-lg lg:text-xl">%33</span>
+            <span className="text-primary font-bold text-lg lg:text-xl">%60</span>
             <span className="text-foreground">على الكورس لأول</span>
             <span className="text-primary font-bold">100 طالب</span>
             <span className="text-muted-foreground mx-1 lg:mx-2">—</span>
