@@ -20,7 +20,7 @@ interface BookingModalProps {
   bookingInfo?: { courseName: string; amount: string } | null;
 }
 
-const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
+const BookingModal = ({ open, onOpenChange, bookingInfo }: BookingModalProps) => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
