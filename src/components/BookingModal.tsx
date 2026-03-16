@@ -96,8 +96,9 @@ const BookingModal = ({ open, onOpenChange, bookingInfo }: BookingModalProps) =>
   };
 
   const handleWhatsAppClick = () => {
+    const courseInfo = bookingInfo ? `\nالكورس: ${bookingInfo.courseName}\nالمبلغ المدفوع: ${bookingInfo.amount}` : "";
     const message = encodeURIComponent(
-      `مرحباً، أريد تأكيد حجزي في الدورة.\n\nالاسم: ${formData.name}\nالبريد: ${formData.email}\nالهاتف: ${formData.phone}\nطريقة الدفع: ${paymentMethods.find(m => m.id === formData.paymentMethod)?.label}`
+      `مرحباً، أريد تأكيد حجزي في الدورة.\n\nالاسم: ${formData.name}\nالبريد: ${formData.email}\nالهاتف: ${formData.phone}\nطريقة الدفع: ${paymentMethods.find(m => m.id === formData.paymentMethod)?.label}${courseInfo}`
     );
     window.open(`https://wa.me/%2B201016712243?text=${message}`, "_blank");
   };
