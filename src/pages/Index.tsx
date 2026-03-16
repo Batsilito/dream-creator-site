@@ -11,29 +11,40 @@ import BookingModal from "@/components/BookingModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import OfferBanner from "@/components/OfferBanner";
 
+export interface BookingInfo {
+  courseName: string;
+  amount: string;
+}
+
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [bookingInfo, setBookingInfo] = useState<BookingInfo | null>(null);
+
+  const handleBookingClick = (info?: BookingInfo) => {
+    setBookingInfo(info || null);
+    setIsBookingOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-background pt-12">
       <OfferBanner />
       <Navbar />
-      <HeroSection onBookingClick={() => setIsBookingOpen(true)} />
+      <HeroSection onBookingClick={() => handleBookingClick()} />
       <FeaturesSection />
       {/* Mobile */}
       <div className="lg:hidden">
         <TargetAudienceSection />
-        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-mobile" />
+        <PricingSection onBookingClick={handleBookingClick} sectionId="courses-mobile" />
       </div>
       {/* Desktop */}
       <div className="hidden lg:block">
         <TargetAudienceSection />
-        <PricingSection onBookingClick={() => setIsBookingOpen(true)} sectionId="courses-desktop" />
+        <PricingSection onBookingClick={handleBookingClick} sectionId="courses-desktop" />
       </div>
       <StudentProjectsSection />
       <TestimonialsSection />
       <FooterSection />
-      <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
+      <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} bookingInfo={bookingInfo} />
       <WhatsAppButton />
     </div>
   );

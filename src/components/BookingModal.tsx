@@ -17,6 +17,7 @@ const contactSchema = z.object({
 interface BookingModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  bookingInfo?: { courseName: string; amount: string } | null;
 }
 
 const BookingModal = ({ open, onOpenChange }: BookingModalProps) => {
