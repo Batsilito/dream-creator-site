@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import type { BookingInfo } from "@/pages/Index";
 
 interface PricingSectionProps {
-  onBookingClick: () => void;
+  onBookingClick: (info?: BookingInfo) => void;
   sectionId?: string;
 }
 
@@ -120,7 +121,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
                   variant="gold"
                   size="lg"
                   className="w-full"
-                  onClick={onBookingClick}
+                  onClick={() => onBookingClick({ courseName: plan.name, amount: `${price.discounted} ${currency}` })}
                 >
                   احجز مكانك الآن
                 </Button>
