@@ -92,6 +92,9 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
                 <div className="mb-4 lg:mb-6">
                   <h3 className="text-xl lg:text-2xl font-bold">{plan.name}</h3>
                   <p className="text-sm lg:text-base text-muted-foreground">{plan.description}</p>
+                  {plan.startDate && (
+                    <p className="text-sm font-semibold text-primary mt-1">{plan.startDate}</p>
+                  )}
                 </div>
 
                 <div className="space-y-1 lg:space-y-2 mb-4 lg:mb-6">
