@@ -107,7 +107,7 @@ const PricingSection = ({ onBookingClick, sectionId = "courses" }: PricingSectio
                     </span>
                     <span className="text-muted-foreground text-sm lg:text-base">{currency}</span>
                     <span className="text-destructive text-xs lg:text-sm font-medium">
-                      خصم 60%!
+                      خصم 50%!
                     </span>
                   </p>
                 </div>
